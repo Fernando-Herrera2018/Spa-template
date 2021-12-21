@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Segoe UI;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  background-color: #fcf8ef;
+}
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.barra_rosa {
+  background-color: #e5357e;
+  height: 15px;
+}
+
+.logo_redes {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.redes {
+  width: 280px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 25px;
+}
+.redes a {
+  font-size: 30px;
+  color: black;
+}
+.contenedormenu {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  text-align: center;
+  grid-template: auto/repeat(4, 1fr);
+}
+
+nav {
+  border: 2px black solid;
+}
+
+.contenedormenu a {
+  display: inline-block;
+  padding: 10px 30px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorcajas {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "informacion fotovelas";
+}
+.infomacion {
+  grid-area: informacion;
+}
+
+.fotovelas {
+  grid-area: fotovelas;
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+}
+
+.fotovelas figure {
+  filter: sepia(100%);
+  transition: all 0.5s;
+}
+figure:hover {
+  filter: sepia(0%);
+}
+
+.contenedorcajas2 {
+  padding: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "aromatizante informacion-puestos";
+}
+
+.infomacion-puestos {
+  grid-area: informacion-puestos;
+}
+
+.aromatizante {
+  grid-area: aromatizante;
+}
+.slide_foto {
+  background-image: url(imagenes/fondopiedras.jpg);
+  background-position: center center;
+  height: 500px;
+}
+.slide_foto h2 {
+  font-size: 30px;
+  max-width: 600px;
+  text-align: center;
+  color: white;
+}
+.slide_foto h3 {
+  font-size: 20px;
+  max-width: 650px;
+  text-align: center;
+  padding: 10px 30px;
+  color: white;
+}
+a {
+  text-align: center;
+}
+.promo {
+  background-color: #e5357e;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+.video {
+  border: 2px #e5357e solid;
+  padding: 13px 30px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+.servicios {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.servicios article {
+  background-color: #fce7a5;
+  width: 350px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.servicios figure {
+  padding-bottom: 20px;
+}
+.servicios figure img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+.servicios p {
+  padding: 10px;
+  color: black;
+}
+.servicios h3 {
+  padding: 10px;
+  color: black;
+}
+.btn_vermas {
+  display: inline-block;
+  background-color: #e5357e;
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+.abajo {
+  background-color: white;
+}
+footer {
+  background-color: #e5357e;
+  height: 15px;
+}
+@media screen and (max-width: 768px) {
+  .logo_redes {
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+  .contenedormenu {
+    grid-template: repeat(4, 1fr) / auto;
+    text-align: left;
+  }
+  .contenedormenu li {
+    border-bottom: 2px black solid;
+    max-width: 1200px;
+  }
+  .contenedormenu a {
+    display: inline-block;
+  }
+
+  .contenedorcajas {
+    grid-template: repeat(2, auto) / auto;
+    grid-template-areas: "fotovelas" "informacion";
+  }
+  .contenedorcajas2 {
+    grid-template: repeat(2, auto) / auto;
+    grid-template-areas: "aromatizante" "informacion-puestos";
+  }
+  footer {
+    display: none;
+  }
+}
